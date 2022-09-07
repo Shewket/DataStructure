@@ -16,4 +16,15 @@ public class StringUtils {
 
         return count;
     }
+
+    public static String reverse(String str){
+        if (str == null)
+            return "";
+
+        StringBuilder reversed = new StringBuilder();
+        for (var i = str.length() - 1; i >= 0; i--) //  O(n)
+            reversed.append(str.charAt(i)); //  O(1)
+
+        return reversed.toString();
+    }
 }
